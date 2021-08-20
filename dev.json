@@ -1,0 +1,4 @@
+ApplicationDesiredCount=1
+ApplicationImageId=ami-08074574526b8f1f6
+ApplicationSubnets=subnet-4db25005,subnet-0932c36f
+VpcId=vpc-063c3561
