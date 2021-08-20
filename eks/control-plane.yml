@@ -40,6 +40,7 @@ Resources:
     Type: AWS::EKS::Cluster
     Properties:
       Name: eks-cluster
+      Version: "1.21"
       RoleArn: !Sub ${EksServiceRole.Arn}
       ResourcesVpcConfig:
         SubnetIds: !Ref Subnets
