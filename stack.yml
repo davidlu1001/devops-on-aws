@@ -74,7 +74,7 @@ Resources:
       Description: !Sub ${AWS::StackName} ECS Task Runner
       Handler: index.handler
       MemorySize: 128
-      Runtime: python3.6
+      Runtime: python3.9
       Timeout: 300
       Role: !Sub ${EcsTaskRunnerRole.Arn}
       Code:
