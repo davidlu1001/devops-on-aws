@@ -3,6 +3,21 @@ AWSTemplateFormatVersion: "2010-09-09"
 Description: ECR Resources
 
 Resources:
+  CodebuildRepository:
+    Type: AWS::ECR::Repository
+    Properties:
+      RepositoryName: aws-learn-devops/codebuild
+      RepositoryPolicyText:
+        Version: '2008-10-17'
+        Statement:
+          - Sid: CodeBuildAccess
+            Effect: Allow
+            Principal:
+              Service: codebuild.amazonaws.com
+            Action:
+              - ecr:GetDownloadUrlForLayer
+              - ecr:BatchGetImage
+              - ecr:BatchCheckLayerAvailability
   TodobackendRepository:
     Type: AWS::ECR::Repository
     Properties:
