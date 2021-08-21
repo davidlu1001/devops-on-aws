@@ -1,0 +1,5 @@
+FROM docker:dind
+
+# https://github.com/pyca/cryptography/blob/main/docs/installation.rst#alpine
+RUN apk add --no-cache bash make gcc python3-dev py3-pip musl-dev libffi-dev libressl-dev cargo && \
+  pip3 install --no-cache-dir awscli docker-compose
